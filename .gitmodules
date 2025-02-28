@@ -1,0 +1,15 @@
+[submodule "application/samples/epaper/epaper"]
+	path = application/samples/epaper/epaper
+	url = https://gitee.com/near-link-e-paper/epaper
+[submodule "application/samples/epaper"]
+	path = application/samples/epaper
+	url = https://gitee.com/near-link-e-paper/epaper
+[submodule "application/samples/touch_screen"]
+	path = application/samples/touch_screen
+	url = https://gitee.com/near-link-e-paper/touch_screen
+[submodule "application/samples/TouchScreen"]
+	path = application/samples/TouchScreen
+	url = https://github.com/NearLink-ePaper/TouchScreen
+[submodule "application/samples/ePaper"]
+	path = application/samples/ePaper
+	url = https://github.com/NearLink-ePaper/ePaper
