@@ -36,6 +36,6 @@ jobs:
 
     - name: Upload Release Artifacts
       uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            NearLink_ePaper.zip
+      with:
+        files: |
+          NearLink_ePaper.zip
