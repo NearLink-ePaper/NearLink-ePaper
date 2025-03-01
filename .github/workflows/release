@@ -1,0 +1,41 @@
+name: release
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Python
+      uses: actions/setup-python@v5.4.0
+      with:
+        python-version: 3.13
+        cache: pip
+
+    - name: Install Dependencies
+      run: |
+        pip install setuptools cmake ninja
+        pip install -r requirements.txt
+
+    - name: Build
+      run: python build.py -c ws63-liteos-app
+
+    - name: Package
+      run: |
+        mkdir artifact
+        cp README.md ./artifact
+        cp ./output/ws63/fwpkg/ws63-liteos-app/ws63-liteos-app_all.fwpkg ./artifact
+        cd artifact
+        zip ../NearLink_ePaper.zip *
+
+    - name: Upload Release Artifacts
+      uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            NearLink_ePaper.zip
