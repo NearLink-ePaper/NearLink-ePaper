@@ -1,5 +1,4 @@
 name: Update Submodules
-
 on:
   push:
     branches:
@@ -14,10 +13,18 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.CI_TOKEN }}
+          submodules: true
 
       - name: Update Submodules
         run: |
-          git submodule update --remote --merge
-          git add .
-          git commit -m "feat: 更新子模块"
-          git push
+          git pull --recurse-submodules
+          git submodule update --remote --recursive
+        
+      - name: Commit update
+        run: |
+          git config --global user.name 'wellwhz'
+          git config --global user.email 'wellwhz@noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "Auto updated submodule references" && git push || echo "No changes to commit"        
