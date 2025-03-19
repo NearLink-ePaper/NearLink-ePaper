@@ -9,13 +9,13 @@
 	url = https://gitee.com/near-link-e-paper/touch_screen
 [submodule "application/samples/TouchScreen"]
 	path = application/samples/TouchScreen
-	url = https://github.com/NearLink-ePaper/TouchScreen
+	url = https://github.com/NearLink-ePaper/H3863-TouchScreen
 [submodule "application/samples/ePaper"]
 	path = application/samples/ePaper
-	url = https://github.com/NearLink-ePaper/ePaper
+	url = https://github.com/NearLink-ePaper/H3863-ePaper
 [submodule "application/samples/wifi-connect"]
 	path = application/samples/wifi-connect
 	url = https://github.com/NearLink-ePaper/wifi-connect
 [submodule "application/samples/MQTT"]
 	path = application/samples/MQTT
-	url = https://github.com/NearLink-ePaper/Hi3863_MQTT
+	url = https://github.com/NearLink-ePaper/H3863-MQTT
