@@ -39,3 +39,38 @@ if ENABLE_PRODUCTS_SAMPLE
 osource "application/samples/products/Kconfig"
 endif
 
+config ENABLE_EPAPER_SAMPLE
+    bool
+    prompt "Enable the Sample of ePaper."
+    default n
+    depends on SAMPLE_ENABLE
+    help
+        This option means enable the sample of ePaper.
+
+if ENABLE_EPAPER_SAMPLE
+osource "application/samples/ePaper/Kconfig"
+endif
+
+config ENABLE_TOUCH_SCREEN_SAMPLE
+    bool
+    prompt "Enable the Sample of TouchScreen."
+    default n
+    depends on SAMPLE_ENABLE
+    help
+        This option means enable the sample of TouchScreen.
+
+if ENABLE_TOUCH_SCREEN_SAMPLE
+osource "application/samples/TouchScreen/Kconfig"
+endif
+
+config ENABLE_MQTT_SAMPLE
+    bool
+    prompt "Enable the Sample of MQTT."
+    default n
+    depends on SAMPLE_ENABLE
+    help
+        This option means enable the sample of MQTT.
+
+if ENABLE_MQTT_SAMPLE
+osource "application/samples/MQTT/Kconfig"
+endif
