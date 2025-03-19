@@ -13,3 +13,9 @@
 [submodule "application/samples/ePaper"]
 	path = application/samples/ePaper
 	url = https://github.com/NearLink-ePaper/ePaper
+[submodule "application/samples/wifi-connect"]
+	path = application/samples/wifi-connect
+	url = https://github.com/NearLink-ePaper/wifi-connect
+[submodule "application/samples/MQTT"]
+	path = application/samples/MQTT
+	url = https://github.com/NearLink-ePaper/Hi3863_MQTT
